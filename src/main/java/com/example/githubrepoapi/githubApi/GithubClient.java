@@ -32,7 +32,7 @@ public class GithubClient {
             );
             return Arrays.asList(Objects.requireNonNull(response.getBody()));
         }catch (HttpClientErrorException.NotFound e){
-            throw new UserNotFoundException("Github user not found:" + username);
+            throw new UserNotFoundException("Github user not found: " + username);
         }
     }
     public List<GithubBranchResponseFromGit> getBranch(String user, String repo){
