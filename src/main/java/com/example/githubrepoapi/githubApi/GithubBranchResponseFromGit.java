@@ -12,17 +12,11 @@ public class GithubBranchResponseFromGit {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public Commit getCommit() {
         return commit;
     }
 
-    public void setCommit(Commit commit) {
-        this.commit = commit;
-    }
 
     public static class Commit {
         private String sha;
@@ -38,9 +32,7 @@ public class GithubBranchResponseFromGit {
             return sha;
         }
 
-        public void setSha(String sha) {
-            this.sha = sha;
-        }
+
     }
 
 }

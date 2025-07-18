@@ -18,25 +18,16 @@ public class GithubReposiotryResponeFromGit {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public boolean isFork() {
         return fork;
     }
 
-    public void setFork(boolean fork) {
-        this.fork = fork;
-    }
 
     public Owner getOwner() {
         return owner;
     }
 
-    public void setOwner(Owner owner) {
-        this.owner = owner;
-    }
 
     public static class Owner {
         private String login;
@@ -52,9 +43,6 @@ public class GithubReposiotryResponeFromGit {
             return login;
         }
 
-        public void setLogin(String login) {
-            this.login = login;
-        }
     }
 
 }
