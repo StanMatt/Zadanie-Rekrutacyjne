@@ -16,7 +16,7 @@ public class GithubControllerIntegrationTest {
     private MockMvc mockMvc;
 
     @Test
-    void shouldReturRepositoriesForValidUser() throws Exception{
+    void shouldReturRepositoriesForValidUser() throws Exception {
         mockMvc.perform(get("/api/github/catrat/repositories"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"))

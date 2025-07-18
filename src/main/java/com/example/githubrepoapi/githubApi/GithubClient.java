@@ -16,7 +16,7 @@ public class GithubClient {
 
     private final RestTemplate restTemplate;
 
-    public GithubClient(){
+    public GithubClient() {
         this.restTemplate = new RestTemplate();
         this.restTemplate.getInterceptors().add((request, body, execution) -> {
             request.getHeaders().add(HttpHeaders.USER_AGENT, "MyApp");
@@ -31,11 +31,12 @@ public class GithubClient {
                     username
             );
             return Arrays.asList(Objects.requireNonNull(response.getBody()));
-        }catch (HttpClientErrorException.NotFound e){
+        } catch (HttpClientErrorException.NotFound e) {
             throw new UserNotFoundException("Github user not found: " + username);
         }
     }
-    public List<GithubBranchResponseFromGit> getBranch(String user, String repo){
+
+    public List<GithubBranchResponseFromGit> getBranch(String user, String repo) {
         ResponseEntity<GithubBranchResponseFromGit[]> response = restTemplate.getForEntity(
                 "https://api.github.com/repos/{user}/{repo}/branches",
                 GithubBranchResponseFromGit[].class,
@@ -44,5 +45,5 @@ public class GithubClient {
         );
         return Arrays.asList(Objects.requireNonNull(response.getBody()));
     }
-    }
+}
 

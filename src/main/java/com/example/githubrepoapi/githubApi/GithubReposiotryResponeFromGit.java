@@ -5,7 +5,8 @@ public class GithubReposiotryResponeFromGit {
     private boolean fork;
     private Owner owner;
 
-    public GithubReposiotryResponeFromGit(){}
+    public GithubReposiotryResponeFromGit() {
+    }
 
     public GithubReposiotryResponeFromGit(String name, boolean fork, Owner owner) {
         this.name = name;
@@ -40,7 +41,8 @@ public class GithubReposiotryResponeFromGit {
     public static class Owner {
         private String login;
 
-        public Owner(){}
+        public Owner() {
+        }
 
         public Owner(String login) {
             this.login = login;

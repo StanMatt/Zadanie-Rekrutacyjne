@@ -4,7 +4,8 @@ public class GithubBranchResponseFromGit {
     private String name;
     private Commit commit;
 
-    public  GithubBranchResponseFromGit(){}
+    public GithubBranchResponseFromGit() {
+    }
 
 
     public String getName() {
@@ -23,10 +24,11 @@ public class GithubBranchResponseFromGit {
         this.commit = commit;
     }
 
-    public static class Commit{
+    public static class Commit {
         private String sha;
 
-        public Commit(){}
+        public Commit() {
+        }
 
         public Commit(String sha) {
             this.sha = sha;
