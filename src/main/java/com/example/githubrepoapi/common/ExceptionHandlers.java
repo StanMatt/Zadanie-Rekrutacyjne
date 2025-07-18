@@ -15,7 +15,7 @@ public class ExceptionHandlers {
     public ResponseEntity<Map<String, Object>> handleUserNotFound(UserNotFoundException ex){
         Map<String, Object> body = Map.of(
                 "status", HttpStatus.NOT_FOUND.value(),
-                "msg", ex.getMessage()
+                "message", ex.getMessage()
         );
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
     }
